@@ -8,7 +8,7 @@ export class WeatherSearch extends Component {
   //     }
 
   componentDidMount = () => {
-    console.log("WeatherSearch mounted!");
+    // console.log("WeatherSearch mounted!");
   };
 
   render() {
@@ -21,7 +21,19 @@ export class WeatherSearch extends Component {
           <p>
             <input id="country" type="text" placeholder="Country..." />
           </p>
-          <button id="searchSubmit" onClick={(e) => this.props.onClick(e, document.getElementById('city').value.concat(' ', document.getElementById('country').value))}>Check the Weather!</button>
+          <button
+            id="searchSubmit"
+            onClick={e =>
+              this.props.onClick(
+                e,
+                document
+                  .getElementById("city")
+                  .value.concat(",", document.getElementById("country").value)
+              )
+            }
+          >
+            Check the Weather!
+          </button>
         </form>
       </div>
     );

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { WeatherPappa } from "./containers/WeatherPappa";
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
       <div className="App">
@@ -11,5 +11,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
